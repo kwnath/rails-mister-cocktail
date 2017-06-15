@@ -3,6 +3,17 @@
     <h1 id="header-title"><%= @cocktail.name.upcase %></h1>
     <!-- @cocktail.image -->
       <h2>Ingredients</h2>
-  </div>
+        <% @cocktail.doses.each do |e| %>
+          <p> <%= e.description %>
+          <%= e.ingredient.name %>
+          <%= link_to 'remove', cocktail_dose_path(@cocktail, e), class: 'btn btn-primary', method: :delete %>
+          </p>
+        <% end %>
+      <div class="padded">
+        <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
+        </div>
+        <div class="padded">
+        </div>
 
+  </div>
 </div>

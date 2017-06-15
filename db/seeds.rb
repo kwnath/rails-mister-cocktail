@@ -9,3 +9,13 @@
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "rum")
+Ingredient.create(name: "cranberry juice")
+Ingredient.create(name: "lime juice")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "midori melon liqueur")
+Ingredient.create(name: "gin")
+Ingredient.create(name: "tonic water")
+
+
+
