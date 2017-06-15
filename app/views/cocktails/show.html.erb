@@ -4,9 +4,11 @@
     <!-- @cocktail.image -->
       <h2>Ingredients</h2>
         <% @cocktail.doses.each do |e| %>
-          <p> <%= e.description %>
+
+          <p>
+          <%= link_to 'x', cocktail_dose_path(@cocktail, e), class: 'btn btn-pri', method: :delete %>
+          <%= e.description %>
           <%= e.ingredient.name %>
-          <%= link_to 'remove', cocktail_dose_path(@cocktail, e), class: 'btn btn-primary', method: :delete %>
           </p>
         <% end %>
       <div class="padded">

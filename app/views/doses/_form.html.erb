@@ -1,4 +1,4 @@
-<%= simple_form_for([@cocktail, @ingredient, @dose]) do |f| %>
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%= f.error_notification %>
   <%= f.input :description %>
   <%= f.association :ingredient, prompt: 'Add an ingredient' %>
