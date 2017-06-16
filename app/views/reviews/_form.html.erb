@@ -1,0 +1,6 @@
+<%= simple_form_for([@cocktail, @review]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :content, placeholder: "How's it?" %>
+  <%= f.input :rating, collection: 1..5 %>
+  <%= f.submit class: 'navbar-wagon-item navbar-wagon-button' %>
+<% end %>

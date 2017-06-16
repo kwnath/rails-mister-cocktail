@@ -14,8 +14,17 @@
 
       <div class="padded">
         <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: 'btn navbar-wagon-item navbar-wagon-button' %>
+        <br>
+        <br>
+            <%= link_to 'New review', new_cocktail_review_path(@cocktail), class: 'btn navbar-wagon-item navbar-wagon-button' %>
         </div>
-        <div class="padded">
+
+        <h2>Reviews</h2>
+        <div class="reviews">
+          <% @cocktail.reviews.each do |r| %>
+            <p><%= r.content %></p>
+            <p><%= r.rating %></p>
+          <% end %>
         </div>
 
   </div>
