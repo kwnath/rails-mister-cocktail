@@ -1,9 +1,20 @@
 <div class="container">
   <div class="row text-center">
-      <h1>Cocktails</h1>
+    <h1>Cocktails</h1>
+
       <% @cocktails.each do |c| %>
-        <p> <%= link_to c.name, cocktail_path(c), class: 'no-textd' %> </p>
+          <div class="col-xs-3">
+      <div class="card">
+        <% if c.photo? %>
+        <%= cl_image_tag c.photo.path, width: 200, height: 300, crop: :fill %>
+        <% end %>
+        <div class="card-catergory">
+          <%= link_to c.name, cocktail_path(c), class: 'no-textd' %>
+        </div>
+      </div>
+          </div>
+
       <% end %>
-    </div>
   </div>
+</div>
 </div>

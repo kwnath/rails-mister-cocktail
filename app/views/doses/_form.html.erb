@@ -1,6 +1,6 @@
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%= f.error_notification %>
-  <%= f.input :description %>
+  <%= f.input :description, placeholder: "How many parts?" %>
   <%= f.association :ingredient, prompt: 'Add an ingredient' %>
-  <%= f.submit %>
+  <%= f.submit class: 'navbar-wagon-item navbar-wagon-button' %>
 <% end %>

@@ -1,5 +1,6 @@
 <%= simple_form_for @cocktail do |f| %>
   <% f.error_notification %>
   <%= f.input :name %>
-  <%= f.button :submit, "Create Cocktail", class: "btn btn-primary" %>
+  <%= f.input :photo, as: :attachinary, class: 'btn btn-primary' %>
+  <%= f.submit 'Create Cocktail', class: 'navbar-wagon-item navbar-wagon-button' %>
 <% end %>
