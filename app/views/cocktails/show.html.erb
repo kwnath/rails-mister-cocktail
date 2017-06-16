@@ -4,12 +4,12 @@
     <!-- @cocktail.image -->
       <h2>Ingredients</h2>
         <% @cocktail.doses.each do |e| %>
-
-          <p>
-          <%= link_to 'x', dose_path(e), class: 'btn btn-pri', method: :delete %>
-          <%= e.description %>
-          <%= e.ingredient.name %>
-          </p>
+          <div class="border">
+            <%= link_to '', dose_path(e), class: 'glyphicon glyphicon-remove no-textd', method: :delete %>
+            |
+            <%= e.description %>
+            <%= e.ingredient.name %>
+          </div>
         <% end %>
       <div class="padded">
         <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' %>
